@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Login | Rifki Bookhouse</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="login">
+<div class="login-wrap">
+  <section class="login-hero" aria-label="Tentang Rifki Bookhouse">
+    <h1>Rifki Bookhouse</h1>
+    <p>Pesan buku kuliah, pantau stok, dan lacak kiriman Anda di satu tempat.</p>
+    <div class="rak" aria-hidden="true"><span style="height:90px"></span><span style="height:120px"></span><span style="height:70px"></span><span style="height:140px"></span><span style="height:100px"></span><span style="height:80px"></span></div>
+  </section>
+  <main class="login-form">
+    <div class="card">
+      <h2>Masuk ke akun</h2>
+      <form id="formLogin" novalidate>
+        <label for="email">Email</label><input id="email" type="email" placeholder="mahasiswa@ut.ac.id" autocomplete="username">
+        <label for="password">Password</label><input id="password" type="password" autocomplete="current-password">
+        <p id="errLogin" class="error" role="alert"></p>
+        <button class="btn" type="submit" style="width:100%">Login</button>
+      </form>
+      <div class="links">
+        <button class="btn ghost" type="button" data-open="modalLupa">Lupa Password</button>
+        <button class="btn ghost" type="button" data-open="modalDaftar">Daftar</button>
+      </div>
+      <p class="footer">Demo: mahasiswa@ut.ac.id / utssmt3</p>
+    </div>
+  </main>
+</div>
+
+<div class="modal" id="modalLupa" role="dialog" aria-modal="true" aria-labelledby="tLupa"><div class="modal-box">
+  <h2 id="tLupa">Lupa password</h2>
+  <form id="formLupa" novalidate>
+    <label for="emailLupa">Email terdaftar</label><input id="emailLupa" type="email">
+    <p id="errLupa" class="error" role="alert"></p>
+    <button class="btn" type="submit">Kirim tautan reset</button>
+    <button class="btn ghost" type="button" data-close>Batal</button>
+  </form>
+</div></div>
+
+<div class="modal" id="modalDaftar" role="dialog" aria-modal="true" aria-labelledby="tDaftar"><div class="modal-box">
+  <h2 id="tDaftar">Buat akun baru</h2>
+  <form id="formDaftar" novalidate>
+    <label for="namaDaftar">Nama lengkap</label><input id="namaDaftar" type="text">
+    <label for="emailDaftar">Email</label><input id="emailDaftar" type="email">
+    <label for="passDaftar">Password (min. 6 karakter)</label><input id="passDaftar" type="password">
+    <p id="errDaftar" class="error" role="alert"></p>
+    <button class="btn" type="submit">Daftar</button>
+    <button class="btn ghost" type="button" data-close>Batal</button>
+  </form>
+</div></div>
+<script src="js/data.js"></script><script src="js/script.js"></script>
+</body></html>

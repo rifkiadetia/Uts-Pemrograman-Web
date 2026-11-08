@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Katalog &amp; Stok | Rifki Bookhouse</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="stok">
+<header class="topbar"><a class="brand" href="dashboard.html">📚 Rifki Bookhouse</a>
+<nav aria-label="Navigasi utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><button id="logout" class="btn ghost" type="button">Keluar</button></nav></header>
+<main>
+  <h1>Informasi stok katalog</h1>
+  <section class="card" aria-labelledby="hStok">
+    <h2 id="hStok">Daftar buku (<span id="totalJudul">0</span> judul)</h2>
+    <label for="cari">Cari judul buku</label><input id="cari" type="search" placeholder="Ketik judul…">
+    <div class="tabel"><table><thead><tr><th>Kode</th><th>Judul</th><th>Penulis</th><th>Kategori</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr></thead><tbody id="tbStok"></tbody></table></div>
+  </section>
+  <section class="card" aria-labelledby="hTambah">
+    <h2 id="hTambah">Tambah stok baru</h2>
+    <form id="formStok" novalidate>
+      <div class="grid2">
+        <div><label for="kode">Kode buku</label><input id="kode" name="kode" placeholder="BK-007"></div>
+        <div><label for="judul">Judul</label><input id="judul" name="judul"></div>
+        <div><label for="penulis">Penulis</label><input id="penulis" name="penulis"></div>
+        <div><label for="kategori">Kategori</label><select id="kategori" name="kategori"><option>Teknologi</option><option>Desain</option><option>Sains</option><option>Pengembangan Diri</option></select></div>
+        <div><label for="harga">Harga (Rp)</label><input id="harga" name="harga" type="number" min="1"></div>
+        <div><label for="stok">Jumlah stok</label><input id="stok" name="stok" type="number" min="0"></div>
+      </div>
+      <p id="errStok" class="error" role="alert"></p>
+      <button class="btn" type="submit">Tambah ke katalog</button>
+    </form>
+  </section>
+</main>
+<footer class="footer"><p>&copy; 2026 Rifki Bookhouse – UTS Pemrograman Web 1</p></footer><script src="js/data.js"></script><script src="js/script.js"></script></body></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pemesanan | Rifki Bookhouse</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="checkout">
+<header class="topbar"><a class="brand" href="dashboard.html">📚 Rifki Bookhouse</a>
+<nav aria-label="Navigasi utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><button id="logout" class="btn ghost" type="button">Keluar</button></nav></header>
+<main>
+  <h1>Pemesanan buku</h1>
+  <section class="card" aria-labelledby="hPilih">
+    <h2 id="hPilih">1. Pilih buku</h2>
+    <div class="grid2">
+      <div><label for="pilihBuku">Buku</label><select id="pilihBuku"></select></div>
+      <div><label for="jumlah">Jumlah</label><input id="jumlah" type="number" min="1" value="1"></div>
+    </div>
+    <p><button class="btn" id="btnTambah" type="button">Tambah ke keranjang</button></p>
+    <div class="tabel"><table><thead><tr><th>Buku</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th>Aksi</th></tr></thead><tbody id="tbKeranjang"></tbody></table></div>
+    <p class="total">Total: <span id="totalBayar">Rp0</span></p>
+  </section>
+  <section class="card" aria-labelledby="hData">
+    <h2 id="hData">2. Data pemesan &amp; pembayaran</h2>
+    <form id="formPesan" novalidate>
+      <div class="grid2">
+        <div><label for="nama">Nama pemesan</label><input id="nama" name="nama"></div>
+        <div><label for="telepon">Nomor HP</label><input id="telepon" name="telepon" type="tel" placeholder="081234567890"></div>
+        <div><label for="ekspedisi">Ekspedisi</label><select id="ekspedisi" name="ekspedisi"></select></div>
+        <div><label for="bayar">Metode pembayaran</label><select id="bayar" name="bayar"><option value="">-- Pilih --</option><option>Transfer Bank</option><option>E-Wallet</option><option>Kartu Kredit</option><option>Bayar di Tempat</option></select></div>
+      </div>
+      <label for="alamat">Alamat pengiriman</label><textarea id="alamat" name="alamat" rows="3"></textarea>
+      <p id="errPesan" class="error" role="alert"></p>
+      <button class="btn" type="submit">Buat pesanan</button>
+    </form>
+  </section>
+</main>
+<div class="modal" id="modalSukses" role="dialog" aria-modal="true" aria-labelledby="tSukses"><div class="modal-box">
+  <h2 id="tSukses">Pesanan berhasil dibuat</h2>
+  <p>Nomor Delivery Order Anda: <strong id="noDO"></strong></p>
+  <p>Gunakan nomor ini di halaman Tracking.</p>
+  <a class="btn" href="tracking.html">Lacak pesanan</a> <button class="btn ghost" type="button" data-close>Tutup</button>
+</div></div>
+<footer class="footer"><p>&copy; 2026 Rifki Bookhouse – UTS Pemrograman Web 1</p></footer><script src="js/data.js"></script><script src="js/script.js"></script></body></html>
